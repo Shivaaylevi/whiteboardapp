@@ -5,7 +5,7 @@ import RoomPage from './pages/Room'
 import io from "socket.io-client";
 
 
-const server = "http://localhost:8080";
+const server =import.meta.env.VITE_BACKEND_URL;
 const connectionOptions = {
   "force new connection": true,
   reconnectionAttempts: "Infinity",

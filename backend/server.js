@@ -8,7 +8,7 @@ const { addUser } = require("./utils/users");
 const io=new Server(server);
 
 app.get("/",(req,res)=>{
-    res.send("app run")
+    res.send("app runing")
 })
 
 let roomIdGlobal,imgURLGlobal;
@@ -35,10 +35,10 @@ io.on("connection",(socket)=>{
         })
     })
 })
-const port=process.env.PORT || 8080
-server.listen(port,()=>{
-    console.log(`app running on ${port}`)
-})
+const port = process.env.PORT || 8080;
+server.listen(port, () => {
+    console.log(`server started on PORT ${port}`);
+});
 
 
 
